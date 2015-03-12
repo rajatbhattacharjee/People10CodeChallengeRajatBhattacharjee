@@ -9,7 +9,7 @@ understanding of general programming knowledge and/or user experience design.
 
 Challenges are time restricted based on which challenges you have accepted or
 have been asked to complete. Each challenge is ***restricted to 2 days and
-4days*** for those who accept or would like to do all 3 challenges.
+4 days*** for those who accept or would like to do all 3 challenges.
 
 *Note: Use of third-party plugins other than those defined within project
 is allowed. But please take into account to demonstrate your strengths and
@@ -47,8 +47,7 @@ ws/customers.sql
 
 ### UI/UX Engineering Challenge
 
-Create a UI to search and view customer data. Use the files below as started
-for the challenge.
+Create a UI to search and view customer data. Use the files below to start.
 
 ```
 ui/customers.json
