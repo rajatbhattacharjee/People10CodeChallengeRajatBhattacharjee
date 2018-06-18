@@ -10,8 +10,8 @@ understanding of general programming knowledge and/or user experience design.
 Challenges are time restricted based on which challenges you have accepted or
 have been asked to complete.
 
-- 2 days for candiates only doing 1-2 challenges
-- 5 days for candiates doing all challenges
+- 2 days for candidates only doing 1-2 challenges
+- 5 days for candidates doing all challenges
 
 *Note: Use of third-party plugins other than those defined within project
 is allowed. But please take into account to demonstrate your strengths and
