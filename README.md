@@ -8,8 +8,10 @@ understanding of general programming knowledge and/or user experience design.
 ## Terms & Conditions
 
 Challenges are time restricted based on which challenges you have accepted or
-have been asked to complete. Each challenge is ***restricted to 2 days and
-4 days*** for those who accept or would like to do all 3 challenges.
+have been asked to complete.
+
+- 2 days for candiates only doing one challenge
+- 5 days for candiates doing all 3 challenges
 
 *Note: Use of third-party plugins other than those defined within project
 is allowed. But please take into account to demonstrate your strengths and
@@ -19,14 +21,15 @@ proprietary plug-ins are allowed.*
 Build this project out in the most appropriate way possible.  Treat it as a
 "real-world component" that will be added into our system.  Feel free to
 restructure/enhance the project as you see fit. However, you must follow the
-restrictions described above.
+restrictions described above. Lastly, solutions should be easily built on
+a standard linux, osx machine or browser.
 
 ## The Challenges
 
 ### ETL Engineering Challenge
 
-Create a solution to upload data in a customers table using the mapping and
-data files below.
+Create a solution to upload data in a single customers table using the mapping
+and data files below.
 
 ```
 etl/map1.csv
@@ -68,7 +71,7 @@ this challenge. Good Luck!!!
 Confidentiality Notice
 ------------------------------------------------------------------------------
 
-Please do not redistribute or make this project public.
+Please do not redistribute or make this project/challenge public.
 
 This email message, including any attachments, is for the sole use of the
 intended recipient(s) and may contain confidential or legally privileged
