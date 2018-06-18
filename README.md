@@ -1,4 +1,4 @@
-# code-challenge-2015
+# code-challenge
 
 ## Introduction
 
@@ -10,8 +10,8 @@ understanding of general programming knowledge and/or user experience design.
 Challenges are time restricted based on which challenges you have accepted or
 have been asked to complete.
 
-- 2 days for candiates only doing one challenge
-- 5 days for candiates doing all 3 challenges
+- 2 days for candiates only doing 1-2 challenges
+- 5 days for candiates doing all challenges
 
 *Note: Use of third-party plugins other than those defined within project
 is allowed. But please take into account to demonstrate your strengths and
@@ -48,13 +48,22 @@ reference purposes only.*
 ws/customers.sql
 ```
 
-### UI/UX Engineering Challenge
+### JS Engineering Challenge
 
-Create a UI to search and view customer data. Use the files below to start.
+Create an app to search and view customer data. Use the files below to start.
 
 ```
-ui/customers.json
-ui/index.html
+js/customers.json
+js/index.html
+```
+
+### UI/UX Design Challenge
+
+Create a visual to represent customers dashboard and profile. Execute as though you have full reign on feature scope for each page. Use the files below to start.
+
+```
+ui/dashboard.html
+ui/profile.html
 ```
 
 ## Questions
