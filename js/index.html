@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Customers App - G4 JS Challenge</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
 
-  <body>
-    <!-- Good luck -->
-    <div id="app"></div>
-    <!-- Feel free to update the code and include libraries as you see fit. -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Customers App - G4 JS Challenge</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- Good luck -->
+  <div id="app"></div>
+  <!-- Feel free to update the code and include libraries as you see fit. -->
+  <form>
+    <input type="number" id="textbox">
+    <p>
+      <input type="button" id="search" value="Search Customer">
+      <input type="button" id="view" value="View Customers">
+  </form>
+  <p id="demo"></p>
+  <script>
+    var xhttp = new XMLHttpRequest();
+    var response;
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        //document.getElementById("demo").innerHTML = xhttp.responseText;
+        response = JSON.parse(xhttp.responseText);
+        var viewAllOutput = '';
+
+        for (var i = 0; i < response.length; i++) {
+          viewAllOutput += '<li>' + response[i].first_name + '</li>';
+          viewAllOutput += '<li>' + "ID:\t" + response[i].id + '</li>';
+          viewAllOutput += '<li>' + "E-Mail:\t" + response[i].email + '</li>';
+          viewAllOutput += '<li>' + "First Name\t:" + response[i].first_name + '</li>';
+          viewAllOutput += '<li>' + "Last Name\t:" + response[i].last_name + '</li>';
+          viewAllOutput += '<li>' + "IP:\t" + response[i].ip + '</li>';
+          viewAllOutput += '<li>' + "Latitude:\t" + response[i].latitude + '</li>';
+          viewAllOutput += '<li>' + "Longitude:\t" + response[i].longitude + '</li>';
+          viewAllOutput += '<li>' + "Created At:\t" + response[i].created_at + '</li>';
+          viewAllOutput += '<li>' + "Updated At:\t" + response[i].updated_at + '</li><p><p>';
+        }
+        
+        // View Button: To view all customers
+        document.getElementById("view").onclick = function (event) {
+          document.getElementById("demo").innerHTML = viewAllOutput;
+        }
+
+        // Search Button: To search a customer by ID
+        document.getElementById("search").onclick =function (event) {
+          var input = document.getElementById("textbox").value;
+          var output = '';
+          for (var i = 0; i < response.length; i++) {
+            if (response[i].id == input) {
+              output += '<li>' + "ID:\t" + response[i].id + '</li>';
+              output += '<li>' + "E-Mail:\t" + response[i].email + '</li>';
+              output += '<li>' + "First Name\t:" + response[i].first_name + '</li>';
+              output += '<li>' + "Last Name\t:" + response[i].last_name + '</li>';
+              output += '<li>' + "IP:\t" + response[i].ip + '</li>';
+              output += '<li>' + "Latitude:\t" + response[i].latitude + '</li>';
+              output += '<li>' + "Longitude:\t" + response[i].longitude + '</li>';
+              output += '<li>' + "Created At:\t" + response[i].created_at + '</li>';
+              output += '<li>' + "Updated At:\t" + response[i].updated_at + '</li>';
+            }
+          }
+          document.getElementById("demo").innerHTML = output;
+        }
+        // In case 'Enter' is pressed in the textfield
+        var newInput = document.getElementById("textbox");
+        newInput.addEventListener("keypress", function(event) {
+          if (event.keyCode === 13) {
+          event.preventDefault();
+          document.getElementById("view").click();
+          }
+        });
+      }
+    };
+    xhttp.open("GET", "customers.json", true);
+    xhttp.send();
+  </script>
+</body>
 </html>

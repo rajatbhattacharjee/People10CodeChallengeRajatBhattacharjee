@@ -1,3 +1,5 @@
+# Note by Rajat Bhattacharjee: I have provided or updated all solutions in the original files in their original locations
+
 # code-challenge
 
 ## Introduction

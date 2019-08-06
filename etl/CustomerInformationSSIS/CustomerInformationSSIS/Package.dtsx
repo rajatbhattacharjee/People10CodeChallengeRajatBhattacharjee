@@ -1,0 +1,1989 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/3/2019 7:56:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAJAT"
+  DTS:CreatorName="RAJAT\Rajat Bhattacharjee"
+  DTS:DTSID="{C2374373-0C19-4FF9-B16D-8EB16C4545D3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{262B817B-3DE8-4985-AED2-A405A2FB5DEC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Flat File Connection 2"
+      DTS:DTSID="{B4A22B7E-724F-4B90-A77C-65D91B7904D6}"
+      DTS:ObjectName="Flat File Connection 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Rajat Bhattacharjee\Downloads\code-challenge\etl\data2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createDatetime"
+              DTS:DTSID="{BB9E9A4D-066E-42E7-9AB2-1843F039C2DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ipAddress"
+              DTS:DTSID="{8AC5589C-50BC-43FB-B4DC-4F9CB2EA47AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="geoLat"
+              DTS:DTSID="{602151FA-EA60-4718-A035-A79151745BAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="geoLong"
+              DTS:DTSID="{60B40780-A7F1-4ABB-B74B-8842F3F1332A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="firstName"
+              DTS:DTSID="{E8E4EF84-F6FF-4C96-B170-47E4C1FA661C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastName"
+              DTS:DTSID="{BE11227F-4D52-459E-9D31-0F3F7B5DCEE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="emailAddress"
+              DTS:DTSID="{D1CA13A0-170C-41B7-8D23-E031BAD63682}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAJAT]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D3036B81-052C-483E-B915-58C70BFA2A26}"
+      DTS:ObjectName="RAJAT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RAJAT;Integrated Security=True;Application Name=SSIS-Package-{D3036B81-052C-483E-B915-58C70BFA2A26}RAJAT;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAJAT.Customers]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{578A3F0C-443D-47A7-B01D-BEE4A99C29F4}"
+      DTS:ObjectName="RAJAT.Customers">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RAJAT;Initial Catalog=Customers;Integrated Security=True;Application Name=SSIS-Package-{578A3F0C-443D-47A7-B01D-BEE4A99C29F4}RAJAT.Customers;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAJAT.Customers 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{406EFF4D-AE15-45FA-BE6A-C0AB0FD0304E}"
+      DTS:ObjectName="RAJAT.Customers 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RAJAT;Initial Catalog=Customers;Integrated Security=True;Application Name=SSIS-Package-{406EFF4D-AE15-45FA-BE6A-C0AB0FD0304E}RAJAT.Customers 1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS Flat File Connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="SSIS Flat File Connection"
+      DTS:DTSID="{223ABE4D-37F0-4A0C-94D9-FB893EA4864D}"
+      DTS:ObjectName="SSIS Flat File Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Rajat Bhattacharjee\Downloads\code-challenge\etl\data1.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SignUpDate"
+              DTS:DTSID="{D51A5F88-51F7-4BE4-9789-36EA142E308F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First"
+              DTS:DTSID="{5C3E4ED8-EBC6-43F2-ADB7-29A15ADB9D09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last"
+              DTS:DTSID="{C70F2D6C-1E4E-4CFA-BB43-674D830641F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email"
+              DTS:DTSID="{71B202C7-F927-4A18-9380-3D23C777E33C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{919BE0D0-8482-464C-B53D-E76CBE29AF9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{18AD6FBC-A35B-426D-941A-3BE53815BFEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IP"
+              DTS:DTSID="{C166B963-45F9-4336-8D13-81DE2CBE5456}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load CSV File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C39CA818-0E2F-424A-9E89-3BA5F911F18E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load CSV File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load CSV File\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."CustomerTable"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV File\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RAJAT.Customers 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[RAJAT.Customers 1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SignUpDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SignUpDate"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SignUpDate]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[SignUpDate]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[First]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[First]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[First]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Last]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Last]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Last]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[IP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="IP"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[IP]"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[IP]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SignUpDate]"
+                      dataType="dbTimeStamp"
+                      name="SignUpDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[First]"
+                      dataType="wstr"
+                      length="50"
+                      name="First" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Last]"
+                      dataType="wstr"
+                      length="50"
+                      name="Last" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[IP]"
+                      dataType="wstr"
+                      length="50"
+                      name="IP" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Flat File Source 1"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV File\Flat File Source 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SSIS Flat File Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[SSIS Flat File Connection]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[SignUpDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[SignUpDate]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[SignUpDate]"
+                      name="SignUpDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[First]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[First]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[First]"
+                      name="First"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Last]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Last]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Last]"
+                      name="Last"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Email]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[IP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[IP]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[IP]"
+                      name="IP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[SignUpDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SignUpDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[First]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Last]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[IP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IP" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Flat File Source 2"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source 2"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV File\Flat File Source 2.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[createDatetime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[createDatetime]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[createDatetime]"
+                      name="createDatetime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[ipAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[ipAddress]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[ipAddress]"
+                      name="ipAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[geoLat]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLat]"
+                      name="geoLat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLong]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[geoLong]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLong]"
+                      name="geoLong"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[firstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[firstName]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[firstName]"
+                      name="firstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[lastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[lastName]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[lastName]"
+                      name="lastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[emailAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[emailAddress]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[emailAddress]"
+                      name="emailAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[createDatetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="createDatetime" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[ipAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ipAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[geoLat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="geoLat" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[geoLong]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="geoLong" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[firstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="firstName" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[lastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lastName" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].ExternalColumns[emailAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="emailAddress" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Merge"
+              componentClassID="Microsoft.Merge"
+              contactInfo="Merge;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple sorted data flows into one sorted data flow. Unlike the Merge Join, all rows flow to the output. For example, combine two sorted lists of customers into a single sorted list. If sorting is not important, use the Union All transformation. "
+              name="Merge"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Load CSV File\Merge.Inputs[Merge Input 1]"
+                  name="Merge Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[SignUpDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SignUpDate"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[SignUpDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[SignUpDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[First]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[First]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[First]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[Last]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Last]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Last]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[Email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Email"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Email]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Email]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[Latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Latitude"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Latitude]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Latitude]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[Longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Longitude"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Longitude]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Longitude]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 1].Columns[IP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="IP"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[IP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[IP]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load CSV File\Merge.Inputs[Merge Input 2]"
+                  name="Merge Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[createDatetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="createDatetime"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[createDatetime]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[SignUpDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[firstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="firstName"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[firstName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[First]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[lastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lastName"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[lastName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Last]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[emailAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="emailAddress"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[emailAddress]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Email]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[geoLat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="geoLat"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[geoLat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Latitude]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[geoLong]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="geoLong"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[geoLong]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Longitude]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Merge.Inputs[Merge Input 2].Columns[ipAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ipAddress"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[ipAddress]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[IP]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Merge.Outputs[Merge Output 1]"
+                  isSorted="true"
+                  name="Merge Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[SignUpDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[SignUpDate]"
+                      name="SignUpDate" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[First]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[First]"
+                      name="First"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Last]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Last]"
+                      name="Last" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Latitude]"
+                      name="Latitude" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[Longitude]"
+                      name="Longitude" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[IP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Merge.Outputs[Merge Output 1].Columns[IP]"
+                      name="IP" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load CSV File\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[SignUpDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SignUpDate"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[SignUpDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[First]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[First]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[Last]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Last]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[Email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Email"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Email]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[Latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Latitude"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[Longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Longitude"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Longitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort.Inputs[Sort Input].Columns[IP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="IP"
+                      lineageId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[IP]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[SignUpDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[SignUpDate]"
+                      name="SignUpDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[SignUpDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[First]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[First]"
+                      name="First"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[First]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Last]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Last]"
+                      name="Last">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Last]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Email]"
+                      name="Email">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Email]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Latitude]"
+                      name="Latitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[Longitude]"
+                      name="Longitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[Longitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[IP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort.Outputs[Sort Output].Columns[IP]"
+                      name="IP">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output].Columns[IP]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load CSV File\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[createDatetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="createDatetime"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[createDatetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[ipAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ipAddress"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[ipAddress]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[geoLat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="geoLat"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLat]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[geoLong]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="geoLong"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLong]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[firstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="firstName"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[firstName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[lastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lastName"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[lastName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load CSV File\Sort 1.Inputs[Sort Input].Columns[emailAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="emailAddress"
+                      lineageId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[emailAddress]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[createDatetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[createDatetime]"
+                      name="createDatetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[createDatetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[ipAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[ipAddress]"
+                      name="ipAddress">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[ipAddress]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[geoLat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[geoLat]"
+                      name="geoLat">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLat]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[geoLong]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[geoLong]"
+                      name="geoLong">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[geoLong]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[firstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[firstName]"
+                      name="firstName"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[firstName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[lastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[lastName]"
+                      name="lastName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[lastName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[emailAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load CSV File\Sort 1.Outputs[Sort Output].Columns[emailAddress]"
+                      name="emailAddress">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output].Columns[emailAddress]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load CSV File.Paths[Flat File Source Output]"
+              endId="Package\Load CSV File\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Load CSV File\Flat File Source 1.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load CSV File.Paths[Flat File Source Output1]"
+              endId="Package\Load CSV File\Sort 1.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Load CSV File\Flat File Source 2.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load CSV File.Paths[Merge Output 1]"
+              endId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Merge Output 1"
+              startId="Package\Load CSV File\Merge.Outputs[Merge Output 1]" />
+            <path
+              refId="Package\Load CSV File.Paths[Sort Output]"
+              endId="Package\Load CSV File\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\Load CSV File\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Load CSV File.Paths[Sort Output1]"
+              endId="Package\Load CSV File\Merge.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\Load CSV File\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Load CSV File"
+          TopLeft="210.857146448019,108.282354459796" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load CSV File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Load CSV File\ADO NET Destination"
+          TopLeft="226.285718139337,332.800004667394" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Load CSV File\Flat File Source 2"
+          TopLeft="342.285720114805,75.247059878841" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Load CSV File\Flat File Source 1"
+          TopLeft="146.285716776945,75.247059878841" />
+        <NodeLayout
+          Size="107.2,41.6"
+          Id="Package\Load CSV File\Merge"
+          TopLeft="254.857147197334,251.81176777744" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Load CSV File\Sort"
+          TopLeft="169.142860023343,148.423531033341" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Load CSV File\Sort 1"
+          TopLeft="367.428577685843,147.152942892424" />
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Flat File Source Output]"
+          TopLeft="221.914288400144,116.847059878841">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5764711545"
+              Start="0,0"
+              End="0,24.0764711545">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0764711545" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Flat File Source Output1]"
+          TopLeft="421.257148900324,116.847059878841">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.3058830135834"
+              Start="0,0"
+              End="0,22.8058830135834">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8058830135834" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Sort Output]"
+          TopLeft="217.942860023343,190.023531033341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.5142871739914,61.7882367440986"
+              Start="0,0"
+              End="90.5142871739914,54.2882367440986">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.8941183720493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.8941183720493"
+                    Point2="0,30.8941183720493"
+                    Point3="4,30.8941183720493" />
+                  <mssgle:LineSegment
+                    End="86.5142871739914,30.8941183720493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86.5142871739914,30.8941183720493"
+                    Point2="90.5142871739914,30.8941183720493"
+                    Point3="90.5142871739914,34.8941183720493" />
+                  <mssgle:LineSegment
+                    End="90.5142871739914,54.2882367440986" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Sort Output1]"
+          TopLeft="420.628577685843,188.752942892424">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95.6380971551753,63.0588248850152"
+              Start="0,0"
+              End="-95.6380971551753,55.5588248850152">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.2788935349649" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.2788935349649"
+                    Point2="0,37.2788935349649"
+                    Point3="-4,37.2788935349649" />
+                  <mssgle:LineSegment
+                    End="-91.6380971551753,37.2788935349649" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-91.6380971551753,37.2788935349649"
+                    Point2="-95.6380971551753,37.2788935349649"
+                    Point3="-95.6380971551753,41.2788935349649" />
+                  <mssgle:LineSegment
+                    End="-95.6380971551753,55.5588248850152" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Merge Output 1]"
+          TopLeft="311.971432668336,293.41176777744">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.3882368899547"
+              Start="0,0"
+              End="0,31.8882368899547">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8882368899547" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load CSV File\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,61 +1,204 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Customer Profile - G4 UI/UX Challenge</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
 
-  <body>
-    <!-- Good luck -->
-    <!-- Feel free to update the code/content and include libraries as you see fit. -->
-    <h1>Customer Profile</h1>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Customer Profile - G4 UI/UX Challenge</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <h2>John Doe</h2>
-    <p>Email: john.doe@email.com</p>
-    <p>Phone: 123-123-1234</p>
-    <p>Phone (Mobile): 123-123-9876</p>
-    <p>Since: March 2015</p>
-    <p>Location: 162.142.45.140, 8.13333</p>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <h2>Interests</h2>
-    <ul>
-      <li>Photography</li>
-      <li>Speed Cubes</li>
-      <li>Fortnite</li>
-      <li>Mother of Dragons</li>
-    </ul>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</head>
 
-    <h2>Orders</h2>
+<body class="has-navbar-fixed-top">
+  <!-- Feel free to update the code/content and include libraries as you see fit. -->
+  <script src="js/script.js"></script>
+  <nav class="navbar is-fixed-top box-shadow-y">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger toggler" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      <a href="#" class="navbar-item has-text-weight-bold has-text-black">
+        DemoWebsite
+      </a>
+      <a role="button" class="navbar-burger nav-toggler" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu has-background-white">
+      <div class="navbar-start">
+        <a href="#" class="navbar-item">
+          <i class="fas fa-home icon"></i> Home
+        </a>
+        <a href="#" class="navbar-item">
+          About
+        </a>
+        <a href="#" class="navbar-item">
+          Features
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a href="#" class="navbar-item">
+          Notifications
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a href="#" class="navbar-link">
+            Admin
+          </a>
+          <div class="navbar-dropdown is-right">
+            <a href="profile.html" class="navbar-item">
+              Profile
+            </a>
+            <a href="#" class="navbar-item">Settings</a>
+            <hr class="navbar-divider" />
+            <a href="#" class="navbar-item">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="columns is-variable is-0">
+    <div>
+      <div class="menu-container px-1 has-background-white">
+        <div class="menu-wrapper py-1">
+          <aside class="menu">
+            <p class="menu-label has-text-lighter">General</p>
+            <ul class="menu-list">
+              <li>
+                <a href="dashboard.html" class="has-text-black">
+                  <i class="fas fa-tachometer-alt icon"></i>
+                  Dashboard</a>
+              </li>
+            </ul>
+            <p class="menu-label has-text-lighter">Administration</p>
+            <ul class="menu-list">
+              <li>
+                <a href="profile.html" class="is-active has-background-primary">
+                  <i class="fas fa-cogs icon"></i>
+                  Profile</a>
+              </li>
+              <li>
+                <a href="#" class="has-text-black">
+                  <i class="fas fa-users-cog icon"></i>
+                  Manage Orders</a>
+                <ul>
+                  <li>
+                    <a href="#" class="has-text-black">
+                      <i class="fas fa-users icon"></i>
+                      Orders</a>
+                  </li>
+                  <li>
+                    <a href="#" class="has-text-black">
+                      <i class="fas fa-user-plus icon"></i>
+                      Shop Items</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="menu-label has-text-lighter">Other</p>
+            <ul class="menu-list">
+              <li>
+                <a href="#" class="has-text-black">
+                  <i class="fas fa-comments icon"></i>
+                  Info</a>
+              </li>
+              <li>
+                <a href="#" class="has-text-black">
+                  <i class="fas fa-info-circle icon"></i>
+                  Extras</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Good luck -->
+  <!-- Feel free to update the code/content and include libraries as you see fit. -->
+  <div class="column is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile">
+    <div class="p-1">
+      <div class="columns is-variable is-desktop">
+        <div class="column">
+          <h1 class="title py-1">
+            Customer Profile
+          </h1>
+        </div>
+      </div>
 
-    <table>
-      <tr>
-        <th>#</th>
-        <th>Date</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-      <tr>
-        <td>789</td>
-        <td>2018-06-15T16:00:00Z</td>
-        <td>Processing</td>
-        <td><a href="/order/789">View</a></td>
-      </tr>
-      <tr>
-        <td>456</td>
-        <td>2018-06-10T15:55:00Z</td>
-        <td>Shipped</td>
-        <td><a href="/order/456">View</a></td>
-      </tr>
-      <tr>
-        <td>123</td>
-        <td>2018-06-01T16:00:00Z</td>
-        <td>Delivered</td>
-        <td><a href="/order/123">View</a></td>
-      </tr>
-    </table>
+      <div class="columns  is-variable is-desktop">
+        <div class="column">
+          <div class="card has-background-primary has-text-white">
+            <div class="card-header">
+              <div class="card-header-title has-text-white">
+                Top Seller Total
+              </div>
+            </div>
+            <div class="card-content">
+              <h2>John Doe</h2>
+              <p>Email: john.doe@email.com</p>
+              <p>Phone: 123-123-1234</p>
+              <p>Phone (Mobile): 123-123-9876</p>
+              <p>Since: March 2015</p>
+              <p>Location: 162.142.45.140, 8.13333</p>
 
-  </body>
+              <h2>Interests</h2>
+              <ul>
+                <li>Photography</li>
+                <li>Speed Cubes</li>
+                <li>Fortnite</li>
+                <li>Mother of Dragons</li>
+              </ul>
+
+              <h2>Orders</h2>
+
+              <table>
+                <tr>
+                  <th style="padding:0 15px 0 15px;">#</th>
+                  <th style="padding:0 15px 0 15px;">Date</th>
+                  <th style="padding:0 15px 0 15px;">Status</th>
+                  <th style="padding:0 15px 0 15px;">Actions</th>
+                </tr>
+                <tr>
+                  <td style="padding:0 15px 0 15px;">789</td>
+                  <td style="padding:0 15px 0 15px;">2018-06-15T16:00:00Z</td>
+                  <td style="padding:0 15px 0 15px;">Processing</td>
+                  <td style="padding:0 15px 0 15px;"><a href="/order/789">View</a></td>
+                </tr>
+                <tr>
+                  <td style="padding:0 15px 0 15px;">456</td>
+                  <td style="padding:0 15px 0 15px;">2018-06-10T15:55:00Z</td>
+                  <td style="padding:0 15px 0 15px;">Shipped</td>
+                  <td style="padding:0 15px 0 15px;"><a href="/order/456">View</a></td>
+                </tr>
+                <tr>
+                  <td style="padding:0 15px 0 15px;">123</td>
+                  <td style="padding:0 15px 0 15px;">2018-06-01T16:00:00Z</td>
+                  <td style="padding:0 15px 0 15px;">Delivered</td>
+                  <td style="padding:0 15px 0 15px;"><a href="/order/123">View</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
